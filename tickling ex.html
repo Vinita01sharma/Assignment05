@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling Ticket Example</title>
+    <style>
+        .example{
+            border: 2px solid red;
+            
+         }
+        .boxes * {
+            border: 2px solid red;
+            display: block;
+            color: red;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="example">
+        <div class="boxes" style="color: red;"> body (great-great-grandparent)
+            <div style="border: 2px solid red;">div (great-grandparent)
+                <ul style="border: 2px solid red ;">ul (grandparent)
+                    <li style="border: 2px solid red;">li (direct parent)
+                        <span style="border-color:lightgrey;">span</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
